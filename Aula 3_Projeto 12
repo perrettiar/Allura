@@ -1,3 +1,7 @@
+#etanol: <=15 litros = 2%/litro | >15 litros = 4%/litro | $1.70/litro
+#diesel: <=15 litros = 3%/litro | >15 litros = 5%/litro | $2/litro
+#1.Ler quantidade de litros vendido | 2.Tipo de combustível (E e D) | 3.Calcule o valor a ser pago pelo cliente
+
 tipo = (input("Informe se é álcool (A) ou diesel (D): ")).upper()
 litros = float(input("Informe a quantidade de litros: "))
 
@@ -7,13 +11,13 @@ A2 = (litros * 1.70) - (litros * 1.70 * 0.04)
 D = (litros * 2) - (litros * 2 * 0.03)
 D2 = (litros * 2) - (litros * 2 * 0.05)
 
-if (tipo == A):
+if (tipo == "A"):
   if (litros <= 15):
     print (f"O valor a ser pago é {A}")
   else:
     print (f"O valor a ser pago é {A2}")
 
-elif (tipo == D):
+elif (tipo == "D"):
   if (litros <= 15):
     print (f"O valor a ser pago é {D}")
   else:
