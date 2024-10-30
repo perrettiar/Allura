@@ -1,0 +1,23 @@
+tipo = (input("Informe se é álcool (A) ou diesel (D): ")).upper()
+litros = float(input("Informe a quantidade de litros: "))
+
+A = (litros * 1.70) - (litros * 1.70 * 0.02)
+A2 = (litros * 1.70) - (litros * 1.70 * 0.04)
+
+D = (litros * 2) - (litros * 2 * 0.03)
+D2 = (litros * 2) - (litros * 2 * 0.05)
+
+if (tipo == A):
+  if (litros <= 15):
+    print (f"O valor a ser pago é {A}")
+  else:
+    print (f"O valor a ser pago é {A2}")
+
+elif (tipo == D):
+  if (litros <= 15):
+    print (f"O valor a ser pago é {D}")
+  else:
+    print (f"O valor a ser pago é {D2}")
+
+else:
+   print('Entradas inválidas!')
